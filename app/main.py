@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from random import choice
+import socket
 
 app = FastAPI()
 
@@ -15,4 +16,7 @@ def health():
 
 @app.get("/quote")
 def get_quote():
-    return {"quote": choice(QUOTES)}
+    return {
+        "quote": choice(QUOTES),
+        "pod": socket.gethostname()
+    }
