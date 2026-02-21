@@ -5,3 +5,5 @@ __pycache__/
 aws/
 .env
 *.pem
+*.zip
+awscliv2.zip
